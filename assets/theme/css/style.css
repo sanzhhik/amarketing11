@@ -1,6 +1,6 @@
 @charset "UTF-8";
 section {
-  background-color: #ffffff;
+  background-color: #35323c;
 }
 
 body {
@@ -72,10 +72,8 @@ h6,
 span,
 p,
 a {
-  line-height: 1;
   word-break: break-word;
   word-wrap: break-word;
-  font-weight: 400;
 }
 
 b,
@@ -600,6 +598,9 @@ nav .mbr-section-btn {
 
 .justify-content-center {
   -webkit-justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
 }
 
 .form-inline {
@@ -890,7 +891,6 @@ blockquote {
   .row {
     margin-left: -16px;
     margin-right: -16px;
-    margin-top: 20px;
   }
   .row > [class*=col] {
     padding-left: 16px;

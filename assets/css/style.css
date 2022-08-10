@@ -1,15 +1,16 @@
-/**
-* Template Name: Arsha - v4.3.0
-* Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
-/*--------------------------------------------------------------
-# General
---------------------------------------------------------------*/
+@font-face {
+  font-family: "Gotham Pro";
+  font-style: normal;
+  font-weight: 400;
+  /* Браузер сначала попробует найти шрифт локально */
+  src: local("Gotham Pro"),
+       /* Если не получилось, загрузит woff2 */
+       url("/assets/fonts/gothampro_black.ttf") format("woff2"),
+       /* Если браузер не поддерживает woff2, загрузит woff */
+       url("/assets/fonts/gothampro_black.ttf") format("woff");
+}
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Gotham Pro", sans-serif;
   color: #444444;
 }
 
@@ -24,7 +25,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Jost", sans-serif;
+  font-family: Montserrat;
 }
 
 /*--------------------------------------------------------------
@@ -115,13 +116,8 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
   padding: 15px 0;
 }
-
-#header.header-scrolled, #header.header-inner-pages {
-  background: #FF7F50;
-}
-
 #header .logo {
-  font-size: 30px;
+  font-size: 12px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -165,7 +161,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   justify-content: space-between;
   padding: 6px 0 10px 30px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 500;
   color: #fff;
   white-space: nowrap;
@@ -177,9 +173,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 0;
 }
 
-.navbar a:hover, .navbar .active, .navbar .active:focus, .navbar li:hover > a {
-  color: #c21591;
-}
 
 .navbar .getstarted {
   padding: 8px 20px;
@@ -193,7 +186,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .navbar .getstarted:hover {
   color: #fff;
-  background: #31a9e1;
+  background: gold;
 }
 
 .navbar .dropdown ul {
@@ -370,7 +363,7 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 80vh;
-  background-image: url(../img/glav.png);
+  background-image: url(../img/banner1.png);
 }
 
 #hero .container {
@@ -378,28 +371,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero h1 {
-  margin: 0 0 10px 0;
+  margin: 0 0 40px 0;
   font-size: 48px;
   font-weight: 700;
   line-height: 56px;
   color: #fff;
+  text-align: center;
 }
 
 #hero h2 {
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 50px;
   font-size: 24px;
+  text-align: center;
 }
 
 #hero .btn-get-started {
-  color:#fff;
+  color:black;
   font-size:16px;
   font-family:Formular,Arial,sans-serif;
   line-height:1.55;
   font-weight:600;
   border-width:1px;
   border-radius:30px;
-  background-color:#e92944;
+  background-color:gold;
   border-color:transparent;
   border-style:solid;
   transition:background-color .2s ease-in-out,color .2s ease-in-out,border-color .2s ease-in-out;
@@ -503,7 +498,7 @@ h1, h2, h3, h4, h5, h6 {
 # Sections General
 --------------------------------------------------------------*/
 section {
-  padding: 60px 0;
+
   overflow: hidden;
 }
 
@@ -513,7 +508,6 @@ section {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
 }
 
 .section-title h2 {
@@ -523,10 +517,62 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #37517e;
+  color: gold;
 }
 
 .section-title h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: -5px;
+  left: calc(50% - 60px);
+}
+
+.section-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: gold;
+  bottom: -6px;
+  left: calc(50% - 20px);
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+
+
+sectionwork {
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.sectionwork -bg {
+  background-color: #f3f5fa;
+}
+
+.sectionwork -title {
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.sectionwork -title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: gold;
+}
+
+.sectionwork -title h2::before {
   content: '';
   position: absolute;
   display: block;
@@ -537,18 +583,69 @@ section {
   left: calc(50% - 60px);
 }
 
-.section-title h2::after {
+.sectionwork -title h2::after {
   content: '';
   position: absolute;
   display: block;
   width: 40px;
   height: 3px;
-  background: #FF7F50;
+  background: gold;
   bottom: 0;
   left: calc(50% - 20px);
 }
 
-.section-title p {
+.sectionwork -title p {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# banner
+--------------------------------------------------------------*/
+sectionbanner {
+  overflow: hidden;
+}
+
+.sectionbanner-bg {
+  background-color: #35323c;
+}
+
+.sectionbanner-title {
+  text-align: center;
+}
+
+.sectionbanner-title h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+  color: gold;
+}
+
+.sectionbanner-title h2::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 1px;
+  background: #ddd;
+  bottom: 1px;
+  left: calc(50% - 60px);
+}
+
+.sectionbanner-title h2::after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: gold;
+  bottom: 0;
+  left: calc(50% - 20px);
+}
+
+.sectionbanner-title p {
   margin-bottom: 0;
 }
 
@@ -589,6 +686,8 @@ section {
 .about .content ul {
   list-style: none;
   padding: 0;
+  color: white;
+  font-size: 20px;
 }
 
 .about .content ul li {
@@ -875,7 +974,7 @@ section {
 .cta {
   background: linear-gradient(rgba(40, 58, 90, 0.9), rgba(40, 58, 90, 0.9)), url("../img/banner2.png") fixed center center;
   background-size: cover;
-  padding: 120px 0;
+  padding: 40px 0;
 }
 
 .cta h3 {
@@ -896,11 +995,11 @@ section {
   font-weight:600;
   border-width:1px;
   border-radius:30px;
-  background-color:#e92944;
+  background-color:gold;
   border-color:transparent;
   border-style:solid;
   transition:background-color .2s ease-in-out,color .2s ease-in-out,border-color .2s ease-in-out;
-  box-shadow:0 0 40px 0 rgba(233,41,68,.4);
+  box-shadow:0 0 40px 0 #111111;
   padding: 10px 24px 11px 24px;
   margin-right: 20px;
 }
@@ -1258,17 +1357,17 @@ section {
   font-weight:600;
   border-width:1px;
   border-radius:30px;
-  background-color:#e92944;
+  background-color:gold;
   border-color:transparent;
   border-style:solid;
   transition:background-color .2s ease-in-out,color .2s ease-in-out,border-color .2s ease-in-out;
-  box-shadow:0 0 40px 0 rgba(233,41,68,.4);
+  box-shadow:0 0 40px 0 #111111;
   padding: 10px 24px 11px 24px;
   margin-right: 20px;
 }
 
 .pricing .buy-btn:hover {
-  background: #47b2e4;
+  background: gold;
   color: #fff;
 }
 
@@ -1284,17 +1383,17 @@ section {
   font-weight:600;
   border-width:1px;
   border-radius:30px;
-  background-color:#e92944;
+  background-color:gold;
   border-color:transparent;
   border-style:solid;
   transition:background-color .2s ease-in-out,color .2s ease-in-out,border-color .2s ease-in-out;
-  box-shadow:0 0 40px 0 rgba(233,41,68,.4);
+  box-shadow:0 0 40px 0 #111111;
   padding: 10px 24px 11px 24px;
   margin-right: 20px;
 }
 
 .pricing .featured .buy-btn:hover {
-  background: #23a3df;
+  background: gold;
 }
 
 @media (max-width: 992px) {
@@ -1571,11 +1670,11 @@ section {
   font-weight:600;
   border-width:1px;
   border-radius:30px;
-  background-color:#e92944;
+  background-color:gold;
   border-color:transparent;
   border-style:solid;
   transition:background-color .2s ease-in-out,color .2s ease-in-out,border-color .2s ease-in-out;
-  box-shadow:0 0 40px 0 rgba(233,41,68,.4);
+  box-shadow:0 0 40px 0 #111111;
   padding: 10px 24px 11px 24px;
   margin-right: 20px;
 }
@@ -2007,4 +2106,92 @@ section {
   font-size: 40px;
   color: #4668a2;
   display: block;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.box-container{
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  background: darkcyan;
+  flex-wrap: wrap;
+
+}
+
+.box-container .box{
+  text-align: center;
+  margin: 20px;
+  height: 170px;
+  width: 230px;
+  position: relative;
+  z-index: 1;
+}
+
+.box-container .box::before,
+.box-container .box::after{
+  content: '';
+  position: absolute;
+  top:20px;
+  bottom:20px;
+  right: 0px;
+  left: 0px;
+  z-index: -1;
+  clip-path: polygon(13% 0%, 87% 0%, 100% 50%, 87% 100%, 13% 100%, 0% 50%);
+  background: #2980b9;
+}
+
+.box-container .box::after{
+  top: 0px;
+  bottom: 0px;
+  right: 10px;
+  left: 10px;
+  z-index: -1;
+  clip-path: polygon(20% 0%, 80% 0%, 100% 50%, 80% 100%, 20% 100%, 0% 50%);
+  background: #fff;
+}
+
+.box-container .box i{
+  color: #999;
+  font-size: 40px;
+  padding: 20px 0;
+}
+
+.box-container .box .title{
+  font-size: 20px;
+  text-transform: capitalize;
+  color: #2980b9;
+  padding-bottom: 15px;
+}
+
+.box-container .box .counter{
+  font-size:30px;
+  color:#999;
+}
+
+.box-container .box:nth-child(2)::before{
+  background: #c0392b;
+}
+
+.box-container .box:nth-child(2)::title{
+  color: #c0392b;
+}
+
+.box-container .box:nth-child(3)::before{
+  background: #f39c12;
+}
+
+.box-container .box:nth-child(3)::title{
+  color: #f39c12;
+}
+
+.box-container .box:nth-child(4 )::before{
+  background: #16a085;
+}
+
+.box-container .box:nth-child(4 )::title{
+  color: #16a085;
 }
